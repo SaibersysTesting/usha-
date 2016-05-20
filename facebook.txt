@@ -1,0 +1,46 @@
+package homework;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+
+public class facebook {
+
+	public static void main(String[] args)throws InterruptedException 
+	 {
+		// TODO Auto-generated method stub
+		WebDriver d=new FirefoxDriver();
+		// open URL
+		
+		d.get("http://www.facebook.com");
+		
+		// send emaild to  textbox
+		Thread.sleep(3000);
+		d.findElement(By.id("facebook")).sendKeys("tweety.usha11@gmail.com");
+		
+			
+		// click on next
+		Thread.sleep(3000);
+		d.findElement(By.id("next")).click();
+		
+		// send password to textbox
+		Thread.sleep(3000);
+		d.findElement(By.id("Passwd")).sendKeys("ushakalavati");
+		
+		// click on sign button
+		Thread.sleep(3000);
+		d.findElement(By.id("signIn")).click();
+		
+		// click on sign down
+		Thread.sleep(3000);
+		d.findElement(By.id("signout")).click();
+		
+		
+		
+	}
+}
+
+		
+	
+
+
