@@ -1,0 +1,62 @@
+package homework;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+
+public class HandlingRadioButtons {
+
+	public static void main(String[] args)throws InterruptedException {
+		
+		// TODO Auto-generated method stub
+WebDriver d=new FirefoxDriver();
+		
+		Thread.sleep(5000);
+		
+		// open the web site
+		d.get("http://newtours.demoaut.com/");
+		
+		
+		// 	send username to textbox
+		
+		d.findElement(By.name("userName")).sendKeys("divya");
+		
+		
+		
+		// send password to textbox
+		
+		d.findElement(By.name("password")).sendKeys("divya");
+		
+		
+		// click on sign button
+		
+		d.findElement(By.name("login")).click();
+				
+		Thread.sleep(5000);
+		
+		
+		// hanlding radio button
+		
+		d.findElement(By.xpath("html/body/div[1]/table/tbody/tr/td[2]/table/tbody/tr[4]/td/table/tbody/tr/td[2]/table/tbody/tr[5]/td/form/table/tbody/tr[2]/td[2]/b/font/input[2]")).click();
+	   
+		boolean b=d.findElement(By.xpath("html/body/div[1]/table/tbody/tr/td[2]/table/tbody/tr[4]/td/table/tbody/tr/td[2]/table/tbody/tr[5]/td/form/table/tbody/tr[2]/td[2]/b/font/input[2]")).isSelected();
+		
+		System.out.println("Your Second Radio buttton is select or not : "+b);
+		
+
+		Thread.sleep(5000);
+		d.findElement(By.xpath("html/body/div[1]/table/tbody/tr/td[2]/table/tbody/tr[4]/td/table/tbody/tr/td[2]/table/tbody/tr[5]/td/form/table/tbody/tr[2]/td[2]/b/font/input[1]")).click();
+		   
+		boolean b1=d.findElement(By.xpath("html/body/div[1]/table/tbody/tr/td[2]/table/tbody/tr[4]/td/table/tbody/tr/td[2]/table/tbody/tr[5]/td/form/table/tbody/tr[2]/td[2]/b/font/input[1]")).isSelected();
+		
+		System.out.println("Your First Radio buttton is select or not : "+b1);
+		
+	
+
+}
+
+
+		
+	}
+
+
