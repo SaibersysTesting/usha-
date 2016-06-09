@@ -1,0 +1,46 @@
+public class Human {
+	
+	private String s1;
+	private String s2;
+	{
+	        String s1, s2;
+	        
+	              s1 ="Super class";
+	              s2 ="Parent class";
+	        }
+	        public Human(String str)
+	        {
+	               s1= str;
+	               s2= str;
+	        }
+	}
+	class Boy extends Human
+	{
+	        private static String str;
+			private String s2;
+			private String s1;
+			public Boy() {
+			super(str);
+			// TODO Auto-generated constructor stub
+		}
+			
+				
+
+			public Class Boy()
+	        {
+	              s2 ="Child class";
+				return null;
+	        }
+	        public void disp()
+	        {
+	               System.out.println("String 1 is: "+s1);
+	               System.out.println("String 2 is: "+s2);
+	        }
+	        public static void main(String args[])
+	        {
+	                Boy obj = new Boy();
+	                obj.disp();
+	        }
+	}
+
+
