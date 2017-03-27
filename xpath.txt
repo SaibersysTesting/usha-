@@ -1,0 +1,30 @@
+package homework;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.Select;
+
+
+public class UsingXpath {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+WebDriver driver = new FirefoxDriver();
+driver.get("http://www.facebook.com");
+driver.manage().window().maximize();
+driver.findElement(By.xpath(".//*[@id='u_0_1']")).sendKeys("Rohini");
+driver.findElement(By.xpath(".//*[@id='u_0_3']")).sendKeys("V");
+driver.findElement(By.xpath(".//*[@id='u_0_5']")).sendKeys("rohini@gmail.com");
+driver.findElement(By.xpath(".//*[@id='u_0_8']")).sendKeys("rohini@gmail.com");
+driver.findElement(By.xpath(".//*[@id='u_0_a']")).sendKeys("1234");
+Select sel1=new Select(driver.findElement(By.xpath(".//*[@id='month']")));
+sel1.selectByIndex(3);
+Select sel2=new Select(driver.findElement(By.xpath(".//*[@id='day']")));
+sel2.selectByValue("21");
+Select sel3=new Select(driver.findElement(By.xpath(".//*[@id='year']")));
+sel3.selectByVisibleText("2016");
+	driver.findElement(By.xpath(".//*[@id='u_0_d']")).click();
+	driver.findElement(By.xpath(".//*[@id='reg_pages_msg']/a")).click();
+	driver.navigate().back();
+	driver.quit();
+	}
+	}
