@@ -1,0 +1,37 @@
+package homework;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class opengmail
+{
+
+	public static void main(String[] args) throws InterruptedException 
+	{
+		
+		// open Fire Fox ( Create the fire fox webdriver object)
+		WebDriver d=new FirefoxDriver();
+		
+		// open URL
+		Thread.sleep(3000);
+		d.get("http://www.gmail.com");
+		
+		// send emaild to  textbox
+		Thread.sleep(3000);
+		d.findElement(By.id("Email")).sendKeys("maheshprojectdeveloper@gmail.com");
+		
+			
+		// click on next
+		Thread.sleep(3000);
+		d.findElement(By.id("next")).click();
+		
+		// send password to textbox
+		Thread.sleep(3000);
+		d.findElement(By.id("Passwd")).sendKeys("lakshminaidu");
+		
+		// click on sign button
+		Thread.sleep(3000);
+		d.findElement(By.id("signIn")).click();
+		
+	}
+}
